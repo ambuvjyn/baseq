@@ -1,12 +1,12 @@
 Package: BaSeq
-Type: Package
-Title: Basic Sequence Analysis
-Version: 0.1.0
-Author: Ambu Vijayan
-Maintainer: Ambu Vijayan <ambuvjyn@gmail.com>
-Description: The SeqAnalysis package provides functions for basic sequence analysis, including reading and writing FASTA files, calculating the GC content of a DNA sequence, and translating DNA sequences into protein sequences.
-License: GPL-3
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: What the package does (one paragraph).
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
 Encoding: UTF-8
-LazyData: true
+Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
-Imports: stringr
