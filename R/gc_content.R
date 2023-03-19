@@ -7,7 +7,7 @@
 #' @examples
 #' sequence <- "ATCGAGCTAGCTAGCTAGCTAGCT"
 #' gc_content(sequence)
-#' [1] 50
+#' 50
 #' @export
 gc_content <- function(sequence) {
   # Check input validity
@@ -22,7 +22,7 @@ gc_content <- function(sequence) {
   }
 
   # Calculate GC content
-  gc_count <- sum(str_count(sequence, c("G", "C")))
+  gc_count <- sum(stringr::str_count(sequence, c("G", "C")))
   gc_content <- gc_count / nchar(sequence) * 100
 
   # Return result

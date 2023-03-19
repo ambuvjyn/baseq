@@ -9,16 +9,16 @@
 #'
 #' @examples
 #' seq <- "ATGGTGCTCCGTGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCTACGTAG"
-#' count(seq, "CG")
-#' # output: 14
+#' count_seq_pattern(seq, "CG")
+#' # [1] 31
 #'
 #' @export
-count <- function(seq, pattern) {
+count_seq_pattern <- function(seq, pattern) {
   # convert sequence to uppercase for case-insensitivity
   seq <- toupper(seq)
 
   # count frequency of pattern in sequence
-  pattern_count <- length(gregexpr(pattern, seq)[[1]])
+  pat_count <- length(gregexpr(pattern, seq)[[1]])
 
-  return(pattern_count)
+  return(pat_count)
 }

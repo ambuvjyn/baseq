@@ -18,13 +18,11 @@ a cleaned DNA/RNA sequence string
 This function cleans DNA/RNA sequences by removing any characters that are not A, C, G, T/U.
 }
 \examples{
-#'
 sequence <- "ATGACTGCNATGCNCTAG"
 clean_sequence(sequence, type = "DNA")
-[1] "ATGACTGCATGCCTAG"
+# [1] "ATGACTGCATGCCTAG"
 
 sequence <- "AUGACUGCNAUGCNCUAG"
 clean_sequence(sequence, type = "RNA")
-[1] "AGACGCAGCCAG"
-
+# [1] "AUGACUGCAUGCCUAG"
 }

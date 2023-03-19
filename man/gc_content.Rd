@@ -18,5 +18,5 @@ Calculates the percentage of nucleotides in a DNA sequence that are either guani
 \examples{
 sequence <- "ATCGAGCTAGCTAGCTAGCTAGCT"
 gc_content(sequence)
-[1] 50
+50
 }

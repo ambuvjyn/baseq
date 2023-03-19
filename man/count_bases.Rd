@@ -21,5 +21,5 @@ are returned as a named vector.
 sequence <- "ATCGAGCTAGCTAGCTAGCTAGCT"
 count_bases(sequence)
 # A  C  G  T
-# 3  5 10  5
+# 6  6  6  6
 }

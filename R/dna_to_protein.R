@@ -6,22 +6,27 @@
 #' @return A list of character strings representing the translated protein sequences in all six frames.
 #' @examples
 #' sequence <- "ATCGAGCTAGCTAGCTAGCTAGCT"
-#' seq_translate(sequence)
+#' dna_to_protein(sequence)
 #' # Returns a list containing the translated protein sequences in all six frames:
-#' # $Frame F1
-#' # [1] "SASRSLE"
-#' # $Frame F2
-#' # [1] "EQGRC*"
-#' # $Frame F3
-#' # [1] "GACT*"
-#' # $Frame R1
-#' # [1] "YLSLSLHLEI"
-#' # $Frame R2
-#' # [1] "STNISLLIP"
-#' # $Frame R3
-#' # [1] "GLGA*"
+#' # $`Frame F1`
+#' # [1] "IELAS"
+#' #
+#' # $`Frame F2`
+#' # [1] "SS"
+#' #
+#' # $`Frame F3`
+#' # [1] "RAS"
+#' #
+#' # $`Frame R1`
+#' # [1] "S"
+#' #
+#' # $`Frame R2`
+#' # [1] "AS"
+#' #
+#' # $`Frame R3`
+#' # [1] "LAS"
 #' @export
-seq_translate <- function(sequence) {
+dna_to_protein <- function(sequence) {
 
   # Create a list to store the protein sequences
   proteins <- list()
@@ -47,6 +52,8 @@ seq_translate <- function(sequence) {
       frame_name <- paste0("Frame F", f)
     } else {
       current_seq <- reverse_complement(substring(sequence, abs(f)))
+      if (f == -2) current_seq <- substring(current_seq, 2)
+      if (f == -3) current_seq <- substring(current_seq, 3)
       frame_name <- paste0("Frame R", abs(f))
     }
 

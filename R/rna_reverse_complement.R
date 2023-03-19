@@ -5,17 +5,17 @@
 #' @param sequence A character string containing the DNA sequence to be reversed and complemented
 #' @return A character string containing the reverse complement of the input DNA sequence
 #' @examples
-#' sequence <- "ATCGAGCTAGCTAGCTAGCTAGCT"
-#' reverse_complement(sequence)
-#' # [1] "AGCTAGCTAGCTAGCTAGCTCGAT"
+#' sequence <- "AUCGAGCUAGCUAGCUAGCUAGCU"
+#' rna_reverse_complement(sequence)
+#' # [1] "AGCUAGCUAGCUAGCUAGCUCGAU"
 #' @export
-reverse_complement <- function(sequence) {
+rna_reverse_complement <- function(sequence) {
 
   # Convert the sequence to upper case to make it case-insensitive
   sequence <- toupper(sequence)
 
   # Create a named vector of base complements
-  complements <- c(A="T", C="G", G="C", T="A")
+  complements <- c(A="U", C="G", G="C", U="A")
 
   # Reverse the sequence and replace each base with its complement
   complement_sequence <- sapply(strsplit(sequence, "")[[1]], function(base) complements[[base]])
