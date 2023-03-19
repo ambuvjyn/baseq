@@ -7,13 +7,13 @@
 rna_to_dna(sequence)
 }
 \arguments{
-\item{sequence}{A character string representing a DNA sequence.}
+\item{sequence}{A character string representing a RNA sequence.}
 }
 \value{
-A character string representing the RNA transcript of the input DNA sequence.
+A character string representing the RNA transcript of the input RNA sequence.
 }
 \description{
-This function takes a DNA sequence as input and returns its RNA transcript.
+This function takes a RNA sequence as input and returns its DNA transcript.
 }
 \examples{
 sequence <- "AUCGAGCUAGCUAGCUAGCUAGCU"

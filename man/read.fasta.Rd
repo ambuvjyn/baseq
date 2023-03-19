@@ -11,7 +11,7 @@ read.fasta(file_path)
 }
 \value{
 A list of sequences, where each sequence is associated with its
-        sequence name.
+sequence name.
 }
 \description{
 This function reads in a FASTA file and returns a list of sequences,
