@@ -18,5 +18,5 @@ Given a DNA sequence, the function generates the reverse complement of the seque
 \examples{
 sequence <- "ATCGAGCTAGCTAGCTAGCTAGCT"
 reverse_complement(sequence)
-[1] "AGCTAGCTAGCTAGCTAGCTCGAT"
+# [1] "AGCTAGCTAGCTAGCTAGCTCGAT"
 }
