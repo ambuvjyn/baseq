@@ -1,12 +1,11 @@
 Package: BaSeq
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Basic Sequence Processing Tool for Biological Data
+Version: 0.1.0
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Ambu", "Vijayan", , "ambuvjyn@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-8924-5685"))
+Description: Primarily created as an easy and understanding way to do basic sequences surrounding the central dogma of molecular biology.
+License: GPL-3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
