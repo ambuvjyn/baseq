@@ -9,9 +9,12 @@
 #'         sequence name.
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # Read in sequences from a FASTA file
-#' seqs <- read.fasta("path/to/file.fasta")
+#'
+#' sample_file_path <- system.file("extdata", "sample.fasta", package = "baseq")
+#'
+#' seqs <- read.fasta(sample_file_path)
 #'
 #' # Access a specific sequence by name
 #' seqs[["sequence_name"]]
