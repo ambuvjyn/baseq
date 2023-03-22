@@ -30,7 +30,10 @@ write.list_to_fasta <- function(sequence_list) {
   }
   
   # Close the output file
-  close(con)
+  close.connection(con)
+  
+  # Remove the temp file
+  file.remove("sequences.fasta")
   
   # Print a message indicating successful write
   cat(sprintf("List %s written to FASTA file %s\n", list_name, output_file))

@@ -35,6 +35,9 @@ write.df_to_fasta <- function(df) {
   # Close the file
   close.connection(con)
   
+  # Remove the temp file
+  file.remove("sample_fa.fasta")
+  
   # Print a message indicating successful write
   cat(sprintf("Data frame %s written to fasta file %s\n", df_name, fasta_name))
 }

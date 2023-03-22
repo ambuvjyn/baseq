@@ -35,6 +35,9 @@ write.df_to_fastq <- function(df) {
   # Close the output file
   close.connection(con)
   
+  # Remove the temp file
+  file.remove("sample_fq.fastq")
+  
   # Print a message indicating successful writing
   cat(sprintf("Dataframe %s written to FASTQ file %s\n", df_name, output_file))
 }

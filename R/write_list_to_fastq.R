@@ -37,7 +37,10 @@ write.list_to_fastq <- function(sequence_list) {
   }
   
   # Close the output file
-  close(con)
+  close.connection(con)
+  
+  # Remove the temp file
+  file.remove("sequences_list.fastq")
   
   # Print a message indicating successful write
   cat(sprintf("List %s written to FASTQ file %s\n", list_name, output_file))
