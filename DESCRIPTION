@@ -1,6 +1,6 @@
 Package: baseq
 Title: Basic Sequence Processing Tool for Biological Data
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     person("Ambu", "Vijayan", , "ambuvjyn@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-8924-5685"))
