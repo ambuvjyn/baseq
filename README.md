@@ -24,4 +24,20 @@ rna_to_protein(): This function takes an RNA sequence as input and translates it
 
 gc_content(): The function takes a DNA sequence as input and calculates the percentage of G and C nucleotides in the sequence.
 
-read_fasta(): This is a function that reads in a file in the FASTA format and returns the sequences and sequence headers as a named list in R. 
+read_fasta(): This function reads in a file in the FASTA format and returns the sequences and sequence headers as a named list in R.
+
+fastq_to_fasta(): This function converts a FASTQ file to a FASTA file by changing the extension and replacing the @ symbol with > for sequence headers.
+
+read.fasta_to_df(): This function reads a fasta file into a dataframe and assigns it to the environment.
+
+read.fasta_to_list(): This function reads a fasta file and assigns a list with the header and sequence information to the environment.
+
+read.fastq_to_list(): This function reads a Fastq file and returns a list with three columns: Header, Sequence, and QualityScore.
+
+write.df_to_fasta(): This function writes a data frame containing fasta records to a fasta file with the same name as the data frame.
+
+write.df_to_fastq(): This function writes a FASTQ file from a dataframe of reads.
+
+write.list_to_fasta(): This function takes a list of sequences and writes them to a FASTA file with each sequence as a header and its corresponding sequence.
+
+write.list_to_fastq(): This function takes a list of sequences and quality scores and writes them to a FASTQ file with the name of the list as the base name.
