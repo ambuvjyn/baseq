@@ -1,4 +1,4 @@
-<img src="inst/extdata/figures/logo.png" align="right" height="139"/>
+<img src="inst/logo/logo.png" align="right" height="139"/>
 
 # baseq
 
