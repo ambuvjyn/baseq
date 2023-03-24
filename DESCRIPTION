@@ -1,14 +1,17 @@
 Package: baseq
 Title: Basic Sequence Processing Tool for Biological Data
 Version: 0.1.3
-Authors@R: 
-    person("Ambu", "Vijayan", , "ambuvjyn@gmail.com", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0001-8924-5685"))
+Authors@R:
+person("Ambu", "Vijayan", email = "ambuvjyn@gmail.com", role = c("aut", "cre"),
+comment = c(ORCID = "0000-0001-8924-5685")),
+person("J.", "Sreekumar", email = "Sreekumar.J@icar.gov.in", role = "aut"),
+institution = "ICAR - Central Tuber Crops Research Institute"
 Description: Primarily created as an easy and understanding way to do basic sequences surrounding the central dogma of molecular biology.
 License: GPL-3
 InstData: inst
 Logo: inst/logo/logo.png
 URL: https://github.com/ambuvjyn/baseq
+BugReports: https://github.com/ambuvjyn/baseq/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
