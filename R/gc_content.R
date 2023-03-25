@@ -17,14 +17,14 @@ gc_content <- function(sequence) {
   if (length(sequence) != 1) {
     stop("Input sequence must be a single string.")
   }
-  if (grepl("[^ACGT]", sequence)) {
+  if (grepl("[^ACGTU]", sequence)) {
     stop("Input sequence contains invalid characters.")
   }
-
+  
   # Calculate GC content
-  gc_count <- sum(stringr::str_count(sequence, c("G", "C")))
+  gc_count <- sum(sapply(strsplit(sequence, ""), function(x) x %in% c("G", "C")))
   gc_content <- gc_count / nchar(sequence) * 100
-
+  
   # Return result
   return(gc_content)
 }
