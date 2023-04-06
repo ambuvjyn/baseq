@@ -1,10 +1,78 @@
+[![version](https://img.shields.io/badge/baseq-0.1.4-green)](https://cran.r-project.org/package=baseq) [![license](https://img.shields.io/badge/License-GPLv3-blue)]() [![language](https://img.shields.io/badge/R-100%25-165caa)]() [![Commands](https://img.shields.io/badge/Commands-24-orange)]()
 <img src="man/figures/logo.png" align="right" height="139" />
 
 # baseq
+### Basic Sequence Processing Tool for Biological Data
 
-Basic Sequence Processing Tool for Biological Data
+Developed by Ambu Vijayan and Dr. J. Sreekumar
 
-Commands are explained below
+:notebook: **baseq** : Basic Sequence Processing Tool for Biological Data
+
+:1234: Version 0.1.4
+
+:hash: Commands :
+
+:bulb: **Preprocessing :**
+
+* :dna: clean_sequence()
+
+* :dna: clean_DNA_sequence()
+
+* :dna: clean_RNA_sequence()
+
+* :dna: clean_DNA_file()
+
+* :dna: clean_RNA_file()
+
+* :dna: count_bases()
+
+* :dna: count_seq_pattern()
+
+* :dna: gc_content()
+
+* :dna: gc_content_file()
+
+:bulb: **From DNA :**
+
+* :dna: dna_to_protein()
+
+* :dna: dna_to_rna()
+
+* :dna: reverse_complement()
+
+:bulb: **From RNA :**
+
+* :dna: rna_reverse_complement()
+
+* :dna: rna_to_dna()
+
+* :dna: rna_to_protein()
+
+:bulb: **Readers :**
+
+* :dna: read_fasta()
+
+* :dna: read.fasta_to_df()
+
+* :dna: read.fasta_to_list()
+
+* :dna: read.fastq_to_list()
+
+:bulb: **Writers :**
+
+* :dna: write.df_to_fasta()
+
+* :dna: write.df_to_fastq()
+
+* :dna: write.list_to_fasta()
+
+* :dna: write.list_to_fastq()
+
+:bulb: **Converters :**
+
+* :dna: fastq_to_fasta()
+
+### Commands are explained below
 
 The clean_sequence function is a tool that takes a DNA or RNA sequence as input and removes any characters that are not A, C, G, T (for DNA) or A, C, G, U (for RNA). It returns a character string containing the cleaned sequence. The function takes two parameters: sequence, a character string containing the DNA or RNA sequence to be cleaned, and type, a character string indicating the type of sequence. The default value of type is "DNA". If set to "RNA", the function will remove any characters that are not A, C, G, U. The function returns the cleaned sequence as a character string. The examples show how the function can be used to clean a DNA or RNA sequence.
 
@@ -54,5 +122,17 @@ The clean_DNA_sequence function is a simple bioinformatics utility that removes 
 
 The clean_RNA_sequence function takes an RNA sequence as input and removes any characters other than A, C, G, and U. This function is useful for cleaning up RNA sequences before downstream analysis, such as sequence alignment or expression analysis. The function first converts the sequence to upper case, then removes any characters that are not A, C, G, or U using regular expressions. The cleaned sequence is then returned as output.
 
+_Links :_
+:link: CRAN REPO for version 0.1.0 : [baseq: Basic Sequence Processing Tool for Biological Data](https://cran.r-project.org/package=baseq)
+
+Authors :
+**Ambu Vijayan** _Young Professional, ICAR - Central Tuber Crops Research Institute_
+
+**Dr. J. Sreekumar** _Principal Scientist, ICAR - Central Tuber Crops Research Institute_
+
+Maintainer :
+**Ambu Vijayan**
+
+[![LinkedIn](https://img.shields.io/badge/Ambu_Vijayan-0A66C2?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/ambuvijayan/) [![LinkedIn](https://img.shields.io/badge/Sreekumar_J-0A66C2?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://in.linkedin.com/in/sreekumar-j-8280776)
 
 
