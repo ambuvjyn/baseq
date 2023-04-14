@@ -1,4 +1,4 @@
-[![version](https://img.shields.io/badge/baseq-0.1.4-green)](https://cran.r-project.org/package=baseq) [![license](https://img.shields.io/badge/License-GPLv3-blue)]() [![language](https://img.shields.io/badge/R-100%25-165caa)]() [![Commands](https://img.shields.io/badge/Commands-24-orange)]()
+[![version](https://img.shields.io/badge/baseq-0.1.4-green?style=for-the-badge&logo=github)](https://cran.r-project.org/package=baseq) [![license](https://img.shields.io/badge/License-GPLv3-blue?style=for-the-badge)]() [![language](https://img.shields.io/badge/R-100%25-165caa?style=for-the-badge)]() [![Commands](https://img.shields.io/badge/Commands-24-orange?style=for-the-badge)]()
 <img src="man/figures/logo.png" align="right" height="139" />
 
 # baseq
