@@ -4,7 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Primarily created as an easy and understanding way to do basic sequences surrounding the central dogma of molecular biology.">
 <title>Basic Sequence Processing Tool for Biological Data • baseq</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -12,12 +13,11 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
-<script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script><meta property="og:title" content="Basic Sequence Processing Tool for Biological Data">
+<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Basic Sequence Processing Tool for Biological Data">
 <meta property="og:description" content="Primarily created as an easy and understanding way to do basic sequences surrounding the central dogma of molecular biology.">
 <meta property="og:image" content="/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -25,93 +25,192 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body data-spy="scroll" data-target="#toc">
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <div class="container template-home">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="index.html">baseq</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.4</span>
-      </span>
-    </div>
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    
+    <a class="navbar-brand me-2" href="index.html">baseq</a>
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="articles/baseq.html">Get started</a>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.1</small>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-3">
+      <ul class="navbar-nav me-auto">
+<li class="nav-item">
+  <a class="nav-link" href="articles/baseq.html">Get started</a>
 </li>
-<li>
-  <a href="reference/index.html">Reference</a>
+<li class="nav-item">
+  <a class="nav-link" href="reference/index.html">Reference</a>
 </li>
-<li>
-  <a href="news/index.html">Changelog</a>
+<li class="nav-item">
+  <a class="nav-link" href="news/index.html">Changelog</a>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-  <a href="https://github.com/ambuvjyn/baseq/" class="external-link">
-    <span class="fab fa-github fa-lg"></span>
+<form class="form-inline my-2 my-lg-0" role="search">
+        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="search.json" id="search-input" placeholder="Search for" autocomplete="off">
+</form>
+
+      <ul class="navbar-nav">
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/ambuvjyn/baseq/" aria-label="github">
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
       </ul>
 </div>
-<!--/.nav-collapse -->
+
+    
   </div>
-<!--/.container -->
-</div>
-<!--/.navbar -->
-
-      
-
-      </header><div class="row">
-  <div class="contents col-md-9">
-
-<p><img src="reference/figures/logo.png" align="right" height="139"></p>
+</nav><div class="container template-home">
+<div class="row">
+  <main id="main" class="col-md-9">
 <div class="section level1">
-<div class="page-header"><h1 id="baseq">baseq<a class="anchor" aria-label="anchor" href="#baseq"></a>
-</h1></div>
-<p>Basic Sequence Processing Tool for Biological Data</p>
-<p>Commands are explained below</p>
-<p>The clean_sequence function is a tool that takes a DNA or RNA sequence as input and removes any characters that are not A, C, G, T (for DNA) or A, C, G, U (for RNA). It returns a character string containing the cleaned sequence. The function takes two parameters: sequence, a character string containing the DNA or RNA sequence to be cleaned, and type, a character string indicating the type of sequence. The default value of type is “DNA”. If set to “RNA”, the function will remove any characters that are not A, C, G, U. The function returns the cleaned sequence as a character string. The examples show how the function can be used to clean a DNA or RNA sequence.</p>
-<p>The count_bases function takes a DNA sequence as a character string and counts the number of A’s, C’s, G’s, and T’s in the sequence. The function returns the counts as a named integer vector, where the names of the elements correspond to the nucleotides. This function can be used in bioinformatics applications to analyze DNA sequences and understand their characteristics, such as GC content and motif analysis.</p>
-<p>The count_seq_pattern function counts the frequency of a specific character or pattern in a given DNA sequence. The function takes two arguments: seq, a character vector representing the DNA sequence, and pattern, a character string representing the pattern to be counted in the sequence. The function returns an integer representing the count of the pattern in the sequence. The function is case-insensitive as it converts the sequence to uppercase before counting the pattern frequency. The function is useful for various bioinformatics applications, such as identifying sequence motifs and determining the frequency of particular nucleotide sequences.</p>
-<p>The gc_content function calculates the percentage of nucleotides in a given DNA sequence that are guanine (G) or cytosine (C), and returns this value as a numeric. The function first checks the input sequence for validity (must be a character string, contain only valid DNA characters), then calculates the GC content by counting the number of G and C nucleotides and dividing by the length of the sequence, and returns the result. This function can be useful in many bioinformatics applications where the GC content of a sequence may be important, such as primer design, genome assembly, or gene expression analysis.</p>
-<p>The reverse_complement() function takes a DNA sequence as input, generates the reverse complement of the sequence, and returns it. The function converts the sequence to uppercase, creates a named vector of base complements, and then reverses the sequence and replaces each base with its complement. The resulting reverse complement sequence is then returned as a character string.</p>
-<p>The rna_reverse_complement function generates the reverse complement of a given RNA sequence by replacing each base with its complement, which is defined by the complements vector. The function takes a single argument, sequence, which is a character string containing the RNA sequence to be reversed and complemented. The function returns a character string containing the reverse complement of the input RNA sequence. The function is case-insensitive and can handle RNA sequences containing the bases A, C, G, and U.</p>
-<p>The dna_to_rna function takes a DNA sequence as input and returns its RNA transcript by replacing all thymine (T) nucleotides with uracil (U) nucleotides. The function is useful in bioinformatics applications that require the conversion of DNA sequences to their corresponding RNA transcripts, such as in gene expression analysis.</p>
-<p>The dna_to_protein function is a bioinformatics tool that translates a DNA sequence into its corresponding protein sequences in all six reading frames. It uses a genetic code dictionary to convert the DNA sequence into amino acid sequences. The output is a list of character strings representing the translated protein sequences in all six frames. The function takes a single argument, a character string representing a DNA sequence, and returns a list of the translated protein sequences.</p>
-<p>The rna_to_dna function takes a RNA sequence as input and returns its DNA transcript by replacing all Us with Ts. This function takes an RNA sequence as input and returns its DNA complement.</p>
-<p>The rna_to_protein function takes an RNA sequence as input and translates it in all six reading frames, producing a list of character strings representing the translated protein sequences. The function defines the genetic code and loops through each frame (1 forward, 2 forward, 3 forward, 1 reverse, 2 reverse, 3 reverse) to translate the sequence in triplets. The resulting protein sequences are stored in a list and returned.</p>
-<p>The fastq_to_fasta function converts a FASTQ file to a FASTA file. The @ symbol at the beginning of FASTQ sequence names is removed and replaced with the &gt; symbol for the FASTA format. The output file has the same name as the input FASTQ file, but with the extension changed to .fasta. The function takes a character string specifying the path to the input FASTQ file as input and returns a character string specifying the path to the output FASTA file.</p>
-<p>The read.fasta_to_df function reads a fasta file and creates a dataframe with two columns, “Header” and “Sequence”. The resulting dataframe is then assigned to the environment with the name same as the fasta file name but without the .fasta extension. The function initializes an empty dataframe, loops over the fasta file, reads in header and sequence lines, and adds the header and sequence lines to the dataframe. The function does not return anything, but assigns the resulting dataframe to the environment.</p>
-<p>The read.fasta_to_list function reads a FASTA file and creates a list with two columns: “Header” and “Sequence”. The list is then assigned to the environment with the same name as the FASTA file name but without the .fasta extension. The resulting list can be accessed by name in the environment. The function does not return anything, but instead assigns the resulting list to the environment. This function is useful in bioinformatics for reading in sequence data from FASTA files and accessing it easily in R.</p>
-<p>The read.fastq_to_df function reads in a Fastq file and stores it as a dataframe with three columns: Header, Sequence, and QualityScore. The function takes a character string specifying the path to the Fastq file to be read, and returns a dataframe with the aforementioned columns. The function loops over the Fastq file, reading in four lines at a time, and adds the four lines to the dataframe. The function then closes the file and assigns the dataframe to the environment. Finally, the function prints a message indicating successful assignment.</p>
-<p>The read.fastq_to_list function reads a Fastq file and stores it as a list with three columns: Header, Sequence, and QualityScore. The function takes a character string specifying the path to the Fastq file to be read and returns a list with the aforementioned columns. The function loops over the Fastq file, reads in four lines at a time, removes the @ symbol from the header, and adds the sequence to the list with the header as the list element name. Finally, the function closes the file, assigns the list to the environment, and prints a message indicating successful assignment.</p>
-<p>The write.df_to_fasta function is used to write a data frame containing FASTA records to a file in the FASTA format. The data frame is assumed to have two columns, “Header” and “Sequence”, which represent the header and sequence lines of each FASTA record, respectively. The output file is named after the input data frame with the “.fasta” extension, and is written to the working directory. This function does not return any value but writes a FASTA file to the working directory</p>
-<p>The write.df_to_fastq function writes a FASTQ file from a data frame containing reads in the format “Header”, “Sequence”, and “QualityScore”. The output file has the same name as the input data frame. The function loops over the data frame and writes each read to the output file in the FASTQ format. It then closes the output file and removes the temporary file. Finally, it prints a message indicating the successful writing of the data frame to the FASTQ file.</p>
-<p>The write.list_to_fasta function takes a list of sequences and writes them to a FASTA file. Each element in the list is a character string representing a single sequence. The function uses the name of the list as the base name for the output file with the .fasta extension. Each sequence is written to the output file in FASTA format with the sequence name as the header. The function loops over the list elements and writes each sequence to the file in FASTA format. The output file is closed and a message is printed indicating successful write.</p>
-<p>The write.list_to_fastq function is a tool that writes a list of DNA sequences and their corresponding quality scores to a FASTQ file format. The function takes a list of sequences as input, where each element of the list is a named list containing “Sequence” and “QualityScore” elements. The output file name is set as the input list name with the .fastq extension. Each sequence in the list is written to the output file in FASTQ format, where the sequence name is used as the header and the quality scores are on the following line. The function then prints a message indicating successful write.</p>
-<p>The gc_content_file function takes a multi-FASTA file as input, calculates the GC content for each sequence in the file, and writes the results to a new FASTA file. The function first reads in the input file, parses the sequence names and sequences, and then calculates the GC content for each sequence using a function that splits the sequence into individual nucleotides and counts the number of Gs and Cs. The GC content is then added to the sequence names, and the results are written to a new file with the name format “inputfilename_with_GC_content.fasta”.</p>
-<p>The clean_DNA_file function in R reads a multi-FASTA file containing DNA sequences, removes any characters other than A, T, G, and C, and writes the cleaned sequences to a new multi-FASTA file. The name of the output file is generated by adding the suffix ’_clean.fasta’ to the input file name. The function returns a character string specifying the path to the output FASTA file. The function works by opening the input file, reading the sequences and headers, cleaning the sequences, and writing the cleaned sequences to the output file.</p>
-<p>The clean_RNA_file function reads a multi-FASTA file containing RNA sequences, removes any characters other than A, U, G, and C, and writes the cleaned sequences to a new multi-FASTA file. The name of the output file is generated by adding the suffix ’_clean.fasta’ to the input file name. The function returns a character string specifying the path to the output FASTA file. The function works by opening the input file, reading the sequences and headers, cleaning the sequences, and writing the cleaned sequences to the output file.</p>
-<p>The clean_DNA_sequence function is a simple bioinformatics utility that removes any characters other than A, C, G, and T from a given DNA sequence. The input is a DNA sequence as a character string, and the output is the cleaned DNA sequence as a character string with only A, C, G, and T characters. This function can be useful in data cleaning and preprocessing steps before downstream analysis, such as sequence alignment or variant calling. The function is exported and can be used by other functions or scripts that require cleaning of DNA sequences.</p>
-<p>The clean_RNA_sequence function takes an RNA sequence as input and removes any characters other than A, C, G, and U. This function is useful for cleaning up RNA sequences before downstream analysis, such as sequence alignment or expression analysis. The function first converts the sequence to upper case, then removes any characters that are not A, C, G, or U using regular expressions. The cleaned sequence is then returned as output.</p>
+<div class="page-header">
+<img src="logo.png" class="logo" alt=""><h1 id="baseq">baseq<a class="anchor" aria-label="anchor" href="#baseq"></a>
+</h1>
+</div>
+<div class="section level3">
+<h3 id="basic-sequence-processing-tool-for-biological-data">Basic Sequence Processing Tool for Biological Data<a class="anchor" aria-label="anchor" href="#basic-sequence-processing-tool-for-biological-data"></a>
+</h3>
+<p>Developed by Ambu Vijayan and Dr. J. Sreekumar</p>
+<p><span class="emoji" data-emoji="notebook">📓</span> <strong>baseq</strong> : Basic Sequence Processing Tool for Biological Data</p>
+<p><span class="emoji" data-emoji="1234">🔢</span> Version 0.1.4</p>
+<p><span class="emoji" data-emoji="hash">#️⃣</span> Commands :</p>
+<p><span class="emoji" data-emoji="bulb">💡</span> <strong>Preprocessing :</strong></p>
+<ul>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> clean_sequence()</p></li>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> clean_DNA_sequence()</p></li>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> clean_RNA_sequence()</p></li>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> clean_DNA_file()</p></li>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> clean_RNA_file()</p></li>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> count_bases()</p></li>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> count_seq_pattern()</p></li>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> gc_content()</p></li>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> gc_content_file()</p></li>
+</ul>
+<p><span class="emoji" data-emoji="bulb">💡</span> <strong>From DNA :</strong></p>
+<ul>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> dna_to_protein()</p></li>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> dna_to_rna()</p></li>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> reverse_complement()</p></li>
+</ul>
+<p><span class="emoji" data-emoji="bulb">💡</span> <strong>From RNA :</strong></p>
+<ul>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> rna_reverse_complement()</p></li>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> rna_to_dna()</p></li>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> rna_to_protein()</p></li>
+</ul>
+<p><span class="emoji" data-emoji="bulb">💡</span> <strong>Readers :</strong></p>
+<ul>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> read_fasta()</p></li>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> read.fasta_to_df()</p></li>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> read.fasta_to_list()</p></li>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> read.fastq_to_list()</p></li>
+</ul>
+<p><span class="emoji" data-emoji="bulb">💡</span> <strong>Writers :</strong></p>
+<ul>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> write.df_to_fasta()</p></li>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> write.df_to_fastq()</p></li>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> write.list_to_fasta()</p></li>
+<li><p><span class="emoji" data-emoji="dna">🧬</span> write.list_to_fastq()</p></li>
+</ul>
+<p><span class="emoji" data-emoji="bulb">💡</span> <strong>Converters :</strong></p>
+<ul>
+<li>
+<span class="emoji" data-emoji="dna">🧬</span> fastq_to_fasta()</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="commands-are-explained-below">Commands are explained below<a class="anchor" aria-label="anchor" href="#commands-are-explained-below"></a>
+</h3>
+<p align="justify">
+The clean_sequence function is a tool that takes a DNA or RNA sequence as input and removes any characters that are not A, C, G, T (for DNA) or A, C, G, U (for RNA). It returns a character string containing the cleaned sequence. The function takes two parameters: sequence, a character string containing the DNA or RNA sequence to be cleaned, and type, a character string indicating the type of sequence. The default value of type is “DNA”. If set to “RNA”, the function will remove any characters that are not A, C, G, U. The function returns the cleaned sequence as a character string. The examples show how the function can be used to clean a DNA or RNA sequence.
+</p>
+<p align="justify">
+The count_bases function takes a DNA sequence as a character string and counts the number of A’s, C’s, G’s, and T’s in the sequence. The function returns the counts as a named integer vector, where the names of the elements correspond to the nucleotides. This function can be used in bioinformatics applications to analyze DNA sequences and understand their characteristics, such as GC content and motif analysis.
+</p>
+<p align="justify">
+The count_seq_pattern function counts the frequency of a specific character or pattern in a given DNA sequence. The function takes two arguments: seq, a character vector representing the DNA sequence, and pattern, a character string representing the pattern to be counted in the sequence. The function returns an integer representing the count of the pattern in the sequence. The function is case-insensitive as it converts the sequence to uppercase before counting the pattern frequency. The function is useful for various bioinformatics applications, such as identifying sequence motifs and determining the frequency of particular nucleotide sequences.
+</p>
+<p align="justify">
+The gc_content function calculates the percentage of nucleotides in a given DNA sequence that are guanine (G) or cytosine (C), and returns this value as a numeric. The function first checks the input sequence for validity (must be a character string, contain only valid DNA characters), then calculates the GC content by counting the number of G and C nucleotides and dividing by the length of the sequence, and returns the result. This function can be useful in many bioinformatics applications where the GC content of a sequence may be important, such as primer design, genome assembly, or gene expression analysis.
+</p>
+<p align="justify">
+The reverse_complement() function takes a DNA sequence as input, generates the reverse complement of the sequence, and returns it. The function converts the sequence to uppercase, creates a named vector of base complements, and then reverses the sequence and replaces each base with its complement. The resulting reverse complement sequence is then returned as a character string.
+</p>
+<p align="justify">
+The rna_reverse_complement function generates the reverse complement of a given RNA sequence by replacing each base with its complement, which is defined by the complements vector. The function takes a single argument, sequence, which is a character string containing the RNA sequence to be reversed and complemented. The function returns a character string containing the reverse complement of the input RNA sequence. The function is case-insensitive and can handle RNA sequences containing the bases A, C, G, and U.
+</p>
+<p align="justify">
+The dna_to_rna function takes a DNA sequence as input and returns its RNA transcript by replacing all thymine (T) nucleotides with uracil (U) nucleotides. The function is useful in bioinformatics applications that require the conversion of DNA sequences to their corresponding RNA transcripts, such as in gene expression analysis.
+</p>
+<p align="justify">
+The dna_to_protein function is a bioinformatics tool that translates a DNA sequence into its corresponding protein sequences in all six reading frames. It uses a genetic code dictionary to convert the DNA sequence into amino acid sequences. The output is a list of character strings representing the translated protein sequences in all six frames. The function takes a single argument, a character string representing a DNA sequence, and returns a list of the translated protein sequences.
+</p>
+<p align="justify">
+The rna_to_dna function takes a RNA sequence as input and returns its DNA transcript by replacing all Us with Ts. This function takes an RNA sequence as input and returns its DNA complement.
+</p>
+<p align="justify">
+The rna_to_protein function takes an RNA sequence as input and translates it in all six reading frames, producing a list of character strings representing the translated protein sequences. The function defines the genetic code and loops through each frame (1 forward, 2 forward, 3 forward, 1 reverse, 2 reverse, 3 reverse) to translate the sequence in triplets. The resulting protein sequences are stored in a list and returned.
+</p>
+<p align="justify">
+The fastq_to_fasta function converts a FASTQ file to a FASTA file. The @ symbol at the beginning of FASTQ sequence names is removed and replaced with the &gt; symbol for the FASTA format. The output file has the same name as the input FASTQ file, but with the extension changed to .fasta. The function takes a character string specifying the path to the input FASTQ file as input and returns a character string specifying the path to the output FASTA file.
+</p>
+<p align="justify">
+The read.fasta_to_df function reads a fasta file and creates a dataframe with two columns, “Header” and “Sequence”. The resulting dataframe is then assigned to the environment with the name same as the fasta file name but without the .fasta extension. The function initializes an empty dataframe, loops over the fasta file, reads in header and sequence lines, and adds the header and sequence lines to the dataframe. The function does not return anything, but assigns the resulting dataframe to the environment.
+</p>
+<p align="justify">
+The read.fasta_to_list function reads a FASTA file and creates a list with two columns: “Header” and “Sequence”. The list is then assigned to the environment with the same name as the FASTA file name but without the .fasta extension. The resulting list can be accessed by name in the environment. The function does not return anything, but instead assigns the resulting list to the environment. This function is useful in bioinformatics for reading in sequence data from FASTA files and accessing it easily in R.
+</p>
+<p align="justify">
+The read.fastq_to_df function reads in a Fastq file and stores it as a dataframe with three columns: Header, Sequence, and QualityScore. The function takes a character string specifying the path to the Fastq file to be read, and returns a dataframe with the aforementioned columns. The function loops over the Fastq file, reading in four lines at a time, and adds the four lines to the dataframe. The function then closes the file and assigns the dataframe to the environment. Finally, the function prints a message indicating successful assignment.
+</p>
+<p align="justify">
+The read.fastq_to_list function reads a Fastq file and stores it as a list with three columns: Header, Sequence, and QualityScore. The function takes a character string specifying the path to the Fastq file to be read and returns a list with the aforementioned columns. The function loops over the Fastq file, reads in four lines at a time, removes the @ symbol from the header, and adds the sequence to the list with the header as the list element name. Finally, the function closes the file, assigns the list to the environment, and prints a message indicating successful assignment.
+</p>
+<p align="justify">
+The write.df_to_fasta function is used to write a data frame containing FASTA records to a file in the FASTA format. The data frame is assumed to have two columns, “Header” and “Sequence”, which represent the header and sequence lines of each FASTA record, respectively. The output file is named after the input data frame with the “.fasta” extension, and is written to the working directory. This function does not return any value but writes a FASTA file to the working directory
+</p>
+<p align="justify">
+The write.df_to_fastq function writes a FASTQ file from a data frame containing reads in the format “Header”, “Sequence”, and “QualityScore”. The output file has the same name as the input data frame. The function loops over the data frame and writes each read to the output file in the FASTQ format. It then closes the output file and removes the temporary file. Finally, it prints a message indicating the successful writing of the data frame to the FASTQ file.
+</p>
+<p align="justify">
+The write.list_to_fasta function takes a list of sequences and writes them to a FASTA file. Each element in the list is a character string representing a single sequence. The function uses the name of the list as the base name for the output file with the .fasta extension. Each sequence is written to the output file in FASTA format with the sequence name as the header. The function loops over the list elements and writes each sequence to the file in FASTA format. The output file is closed and a message is printed indicating successful write.
+</p>
+<p align="justify">
+The write.list_to_fastq function is a tool that writes a list of DNA sequences and their corresponding quality scores to a FASTQ file format. The function takes a list of sequences as input, where each element of the list is a named list containing “Sequence” and “QualityScore” elements. The output file name is set as the input list name with the .fastq extension. Each sequence in the list is written to the output file in FASTQ format, where the sequence name is used as the header and the quality scores are on the following line. The function then prints a message indicating successful write.
+</p>
+<p align="justify">
+The gc_content_file function takes a multi-FASTA file as input, calculates the GC content for each sequence in the file, and writes the results to a new FASTA file. The function first reads in the input file, parses the sequence names and sequences, and then calculates the GC content for each sequence using a function that splits the sequence into individual nucleotides and counts the number of Gs and Cs. The GC content is then added to the sequence names, and the results are written to a new file with the name format “inputfilename_with_GC_content.fasta”.
+</p>
+<p align="justify">
+The clean_DNA_file function in R reads a multi-FASTA file containing DNA sequences, removes any characters other than A, T, G, and C, and writes the cleaned sequences to a new multi-FASTA file. The name of the output file is generated by adding the suffix ’_clean.fasta’ to the input file name. The function returns a character string specifying the path to the output FASTA file. The function works by opening the input file, reading the sequences and headers, cleaning the sequences, and writing the cleaned sequences to the output file.
+</p>
+<p align="justify">
+The clean_RNA_file function reads a multi-FASTA file containing RNA sequences, removes any characters other than A, U, G, and C, and writes the cleaned sequences to a new multi-FASTA file. The name of the output file is generated by adding the suffix ’_clean.fasta’ to the input file name. The function returns a character string specifying the path to the output FASTA file. The function works by opening the input file, reading the sequences and headers, cleaning the sequences, and writing the cleaned sequences to the output file.
+</p>
+<p align="justify">
+The clean_DNA_sequence function is a simple bioinformatics utility that removes any characters other than A, C, G, and T from a given DNA sequence. The input is a DNA sequence as a character string, and the output is the cleaned DNA sequence as a character string with only A, C, G, and T characters. This function can be useful in data cleaning and preprocessing steps before downstream analysis, such as sequence alignment or variant calling. The function is exported and can be used by other functions or scripts that require cleaning of DNA sequences.
+</p>
+<p align="justify">
+The clean_RNA_sequence function takes an RNA sequence as input and removes any characters other than A, C, G, and U. This function is useful for cleaning up RNA sequences before downstream analysis, such as sequence alignment or expression analysis. The function first converts the sequence to upper case, then removes any characters that are not A, C, G, or U using regular expressions. The cleaned sequence is then returned as output.
+</p>
+<p><em>Links :</em> <span class="emoji" data-emoji="link">🔗</span> CRAN REPO for version 0.1.1 : <a href="https://cran.r-project.org/package=baseq" class="external-link">baseq: Basic Sequence Processing Tool for Biological Data</a></p>
+<p>Authors : <strong>Ambu Vijayan</strong> <em>Young Professional, ICAR - Central Tuber Crops Research Institute</em></p>
+<p><strong>Dr. J. Sreekumar</strong> <em>Principal Scientist, ICAR - Central Tuber Crops Research Institute</em></p>
+<p>Maintainer : <strong>Ambu Vijayan</strong></p>
+<p><a href="https://www.linkedin.com/in/ambuvijayan/" class="external-link"><img src="https://img.shields.io/badge/Ambu_Vijayan-0A66C2?style=for-the-badge&amp;logo=LinkedIn&amp;logoColor=white" alt="LinkedIn"></a> <a href="https://in.linkedin.com/in/sreekumar-j-8280776/" class="external-link"><img src="https://img.shields.io/badge/Sreekumar_J-0A66C2?style=for-the-badge&amp;logo=LinkedIn&amp;logoColor=white" alt="LinkedIn"></a></p>
+</div>
 </div>
 
-  </div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-    <div class="links">
+  </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
 <li><a href="https://cloud.r-project.org/package=baseq" class="external-link">View on CRAN</a></li>
@@ -138,32 +237,40 @@
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>Ambu Vijayan <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-8924-5685" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
-<li>J. Sreekumar <br><small class="roles"> Author </small>  </li>
+<li>J. Sreekumar <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0002-4253-6378" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 <li><a href="authors.html">More about authors...</a></li>
 </ul>
 </div>
 
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://cran.r-project.org/package=baseq" class="external-link"><img src="https://img.shields.io/cran/v/baseq?style=for-the-badge"></a></li>
+<li><a href="https://cran.r-project.org/package=baseq" class="external-link"><img src="https://img.shields.io/badge/baseq-0.1.4-green?style=for-the-badge&amp;logo=github" alt="version"></a></li>
+<li><a href=""><img src="https://img.shields.io/badge/License-GPLv3-blue?style=for-the-badge" alt="license"></a></li>
+<li><a href=""><img src="https://img.shields.io/badge/R-100%25-165caa?style=for-the-badge" alt="language"></a></li>
+<li><a href=""><img src="https://img.shields.io/badge/Commands-24-orange?style=for-the-badge" alt="Commands"></a></li>
+</ul>
+</div>
 
-
-  </div>
+  </aside>
 </div>
 
 
-      <footer><div class="copyright">
+    <footer><div class="pkgdown-footer-left">
   <p></p>
 <p>Developed by Ambu Vijayan, J. Sreekumar.</p>
 </div>
 
-<div class="pkgdown">
+<div class="pkgdown-footer-right">
   <p></p>
 <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
-      </footer>
+    </footer>
 </div>
 
   
-
 
   
 
