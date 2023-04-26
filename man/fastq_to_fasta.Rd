@@ -18,7 +18,7 @@ FASTQ file, but with the extension changed to \code{.fasta}. This function remov
 of FASTQ sequence names and replaces it with the \code{>} symbol for the FASTA format.
 }
 \examples{
-sample_file_path_two <- system.file("extdata", "sample_fa.fasta", package = "baseq")
+sample_file_path_two <- system.file("extdata", "sample_fq.fastq", package = "baseq")
 fastq_to_fasta(sample_file_path_two)
 # Output: "path/to/library/baseq/extdata/sample_fa.fasta"
 }

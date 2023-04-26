@@ -2,27 +2,22 @@
 % Please edit documentation in R/clean_sequence.R
 \name{clean_sequence}
 \alias{clean_sequence}
-\title{Clean DNA/RNA sequence}
+\title{Clean DNA or RNA sequence}
 \usage{
 clean_sequence(sequence, type = "DNA")
 }
 \arguments{
-\item{sequence}{a DNA/RNA sequence string}
+\item{sequence}{A character string containing the DNA or RNA sequence to be cleaned.}
 
-\item{type}{a character string indicating the type of sequence ("DNA" or "RNA")}
+\item{type}{A character string indicating the type of sequence. The default is "DNA". If set to "RNA", the function will remove any characters that are not A, C, G, U.}
 }
 \value{
-a cleaned DNA/RNA sequence string
+A character string containing the cleaned DNA or RNA sequence.
 }
 \description{
-This function cleans DNA/RNA sequences by removing any characters that are not A, C, G, T/U.
+This function takes a DNA or RNA sequence as input and removes any characters that are not A, C, G, T (for DNA) or A, C, G, U (for RNA).
 }
 \examples{
-sequence <- "ATGACTGCNATGCNCTAG"
-clean_sequence(sequence, type = "DNA")
-# [1] "ATGACTGCATGCCTAG"
-
-sequence <- "AUGACUGCNAUGCNCUAG"
-clean_sequence(sequence, type = "RNA")
-# [1] "AUGACUGCAUGCCUAG"
+clean_sequence("atgcNnRYMK") # Returns "ATGC"
+clean_sequence("auggcuuNnRYMK", type = "RNA") # Returns "AUGGCUU"
 }
