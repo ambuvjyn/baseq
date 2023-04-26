@@ -8,7 +8,7 @@ Developed by Ambu Vijayan and Dr. J. Sreekumar
 
 :notebook: **baseq** : Basic Sequence Processing Tool for Biological Data
 
-:1234: Version 0.1.4
+:1234: Version 0.1.1
 
 :hash: Commands :
 
