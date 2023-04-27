@@ -4,22 +4,31 @@
 \alias{write.df_to_fasta}
 \title{Write a data frame to a fasta file}
 \usage{
-write.df_to_fasta(df)
+write.df_to_fasta(df, output_dir = getwd())
 }
 \arguments{
 \item{df}{A data frame containing fasta records with "Header" and "Sequence" columns.}
+
+\item{output_dir}{The directory path where the output file should be written. If not provided, the working directory will be used.}
 }
 \value{
-This function does not return a value, but writes a fasta file to the working directory.
+This function does not return a value, but writes a fasta file to the specified output directory or the working directory.
 }
 \description{
 This function writes a data frame to a fasta file with the same name as the data frame. The data frame is assumed to have two columns, "Header" and "Sequence", which represent the header and sequence lines of each fasta record, respectively.
 }
 \examples{
-
 sample_file_path <- system.file("extdata", "sample_fa.fasta", package = "baseq")
+tempdir <- tempdir()
+temp_file_path <- file.path(tempdir, basename(sample_file_path))
+file.copy(sample_file_path, temp_file_path, overwrite = TRUE)
 read.fasta_to_df(sample_file_path)
+write.df_to_fasta(sample_fa, output_dir = tempdir)
 
-write.df_to_fasta(sample_fa)
+# Write to working directory
+# write.df_to_fasta(sample_fa)
+
+# Write to custom directory
+# write.df_to_fasta(sample_fa, output_dir = "/path/to/directory/")
 
 }

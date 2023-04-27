@@ -7,34 +7,41 @@
 #' @param sequence_list A list of sequences where each element of the list is a character string
 #' representing a single sequence.
 #'
+#' @param output_dir The directory path where the output file should be written. If not provided, the working directory will be used.
+#'
 #' @examples
 #' sequences <- list("ACGT", "ATCG")
-#' write.list_to_fasta(sequences)
+#' tempdir <- tempdir()
+#' write.list_to_fasta(sequences, output_dir = tempdir)
+#'
+#' # Write to working directory
+#' # write.list_to_fasta(sequences)
+#'
+#' # Write to custom directory
+#' # write.list_to_fasta(sequences, output_dir = "/path/to/directory/")
 #'
 #' @export
-write.list_to_fasta <- function(sequence_list) {
+write.list_to_fasta <- function(sequence_list, output_dir=getwd()) {
   # Get the list name
   list_name <- deparse(substitute(sequence_list))
-  
+
   # Set the output file name as the list name with the .fasta extension
-  output_file <- paste0(list_name, ".fasta")
-  
+  output_file <- file.path(output_dir, paste0(list_name, ".fasta"))
+
   # Open the output file for writing
   con <- file(output_file, "w")
-  
+
   # Loop over the list elements and write each sequence to the file in FASTA format
-  for (seq_name in names(sequence_list)) {
-    sequence <- sequence_list[[seq_name]]
+  for (i in seq_along(sequence_list)) {
+    seq_name <- paste0("seq", i)
+    sequence <- sequence_list[[i]]
     writeLines(sprintf(">%s", seq_name), con)
     writeLines(sequence, con)
   }
-  
+
   # Close the output file
-  close.connection(con)
-  
-  # Remove the temp file
-  file.remove("sequences.fasta")
-  
+  close(con)
+
   # Print a message indicating successful write
   cat(sprintf("List %s written to FASTA file %s\n", list_name, output_file))
 }

@@ -2,25 +2,34 @@
 % Please edit documentation in R/write_list_to_fastq.R
 \name{write.list_to_fastq}
 \alias{write.list_to_fastq}
-\title{Write a list of sequences and quality scores to a FASTQ file}
+\title{Write a list of sequence_bases and quality scores to a FASTQ file}
 \usage{
-write.list_to_fastq(sequence_list)
+write.list_to_fastq(sequence_list, output_dir = getwd())
 }
 \arguments{
-\item{sequence_list}{A list of sequences where each element of the list is a named list
+\item{sequence_list}{A list of sequence_bases where each element of the list is a named list
 containing "Sequence" and "QualityScore" elements.}
+
+\item{output_dir}{The directory path where the output file should be written. If not provided, the working directory will be used.}
 }
 \description{
-This function takes a list of sequences and quality scores and writes them to a FASTQ file.
+This function takes a list of sequence_bases and quality scores and writes them to a FASTQ file.
 The name of the list is used as the base name for the output file with the .fastq extension.
 Each sequence in the list is written to the output file in FASTQ format with the sequence
 name as the header and the quality scores on the following line.
 }
 \examples{
-sequences <- list("ACGT", "ATCG")
+sequence_bases <- list("ACGT", "ATCG")
 quality_scores <- list("IIII", "JJJJ")
-sequences_list <- list(seq1=list(Sequence=sequences[[1]], QualityScore=quality_scores[[1]]),
-                       seq2=list(Sequence=sequences[[2]], QualityScore=quality_scores[[2]]))
-write.list_to_fastq(sequences_list)
+sequences <- list(seq1=list(Sequence=sequence_bases[[1]], QualityScore=quality_scores[[1]]),
+                       seq2=list(Sequence=sequence_bases[[2]], QualityScore=quality_scores[[2]]))
+tempdir <- tempdir()
+write.list_to_fastq(sequences, output_dir = tempdir)
+
+# Write to working directory
+# write.list_to_fastq(sequences)
+
+# Write to custom directory
+# write.list_to_fastq(sequences, output_dir = "/path/to/directory/")
 
 }

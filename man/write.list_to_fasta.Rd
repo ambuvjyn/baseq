@@ -4,11 +4,13 @@
 \alias{write.list_to_fasta}
 \title{Write a list of sequences to a FASTA file}
 \usage{
-write.list_to_fasta(sequence_list)
+write.list_to_fasta(sequence_list, output_dir = getwd())
 }
 \arguments{
 \item{sequence_list}{A list of sequences where each element of the list is a character string
 representing a single sequence.}
+
+\item{output_dir}{The directory path where the output file should be written. If not provided, the working directory will be used.}
 }
 \description{
 This function takes a list of sequences and writes them to a FASTA file. The name of the list
@@ -17,6 +19,13 @@ list is written to the output file in FASTA format with the sequence name as the
 }
 \examples{
 sequences <- list("ACGT", "ATCG")
-write.list_to_fasta(sequences)
+tempdir <- tempdir()
+write.list_to_fasta(sequences, output_dir = tempdir)
+
+# Write to working directory
+# write.list_to_fasta(sequences)
+
+# Write to custom directory
+# write.list_to_fasta(sequences, output_dir = "/path/to/directory/")
 
 }

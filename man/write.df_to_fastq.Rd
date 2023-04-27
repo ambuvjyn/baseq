@@ -4,10 +4,12 @@
 \alias{write.df_to_fastq}
 \title{Write a FASTQ file from a dataframe of reads}
 \usage{
-write.df_to_fastq(df)
+write.df_to_fastq(df, output_dir = getwd())
 }
 \arguments{
 \item{df}{A dataframe containing reads in the format "Header", "Sequence", and "QualityScore".}
+
+\item{output_dir}{An optional argument specifying the directory where the FASTQ file should be saved. If not specified, the file will be saved in the working directory.}
 }
 \value{
 A FASTQ file with the same name as the input dataframe.
@@ -17,7 +19,16 @@ Write a FASTQ file from a dataframe of reads
 }
 \examples{
 sample_file_path_two <- system.file("extdata", "sample_fq.fastq", package = "baseq")
+tempdir <- tempdir()
+temp_file_path <- file.path(tempdir, basename(sample_file_path_two))
+file.copy(sample_file_path_two, temp_file_path, overwrite = TRUE)
 read.fastq_to_df(sample_file_path_two)
-write.df_to_fastq(sample_fq)
+write.df_to_fastq(sample_fq, output_dir = tempdir)
+
+# Write to working directory
+# write.df_to_fastq(sample_fq)
+
+# Write to custom directory
+# write.df_to_fastq(sample_fq, output_dir = "/path/to/directory/")
 
 }
