@@ -4,7 +4,7 @@
 <a href="https://github.com/ambuvjyn/baseq"><img src="man/figures/logo.png" align="right" height="139"/></a>
 
 <!-- badges: start -->
-[![CRAN status](https://www.r-pkg.org/badges/version/baseq)](https://cran.r-project.org/package=baseq)
+[![](https://img.shields.io/cran/v/baseq?style=for-the-badge)](https://cran.r-project.org/package=baseq) [![version](https://img.shields.io/badge/baseq-0.1.2-green?style=for-the-badge&logo=github)](https://cran.r-project.org/package=baseq) [![license](https://img.shields.io/badge/License-GPLv3-blue?style=for-the-badge)]() [![language](https://img.shields.io/badge/R-100%25-165caa?style=for-the-badge)]() [![Commands](https://img.shields.io/badge/Commands-26-orange?style=for-the-badge)]()
 <!-- badges: end -->
 
 
@@ -163,9 +163,9 @@ The clean_RNA_sequence function takes an RNA sequence as input and removes any c
 </p>
 
 
-CRAN REPO for version 0.1.0 : [baseq: Basic Sequence Processing Tool for Biological Data](https://cran.r-project.org/package=baseq)
+CRAN REPO for version 0.1.2 : [baseq: Basic Sequence Processing Tool for Biological Data](https://cran.r-project.org/package=baseq)
 
-GitHub REPO for version 0.1.0 : [baseq: Basic Sequence Processing Tool for Biological Data](https://github.com/ambuvjyn/baseq)
+GitHub REPO for version 0.1.2 : [baseq: Basic Sequence Processing Tool for Biological Data](https://github.com/ambuvjyn/baseq)
 
 Authors :
 **Ambu Vijayan** _Young Professional, ICAR - Central Tuber Crops Research Institute_
@@ -174,5 +174,8 @@ Authors :
 
 Maintainer :
 **Ambu Vijayan**
+
+
+[![LinkedIn](https://img.shields.io/badge/Ambu_Vijayan-0A66C2?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://www.linkedin.com/in/ambuvijayan/) [![LinkedIn](https://img.shields.io/badge/Sreekumar_J-0A66C2?style=for-the-badge&logo=LinkedIn&logoColor=white)](https://in.linkedin.com/in/sreekumar-j-8280776/)
 
 
