@@ -148,7 +148,7 @@ The clean_RNA_sequence function takes an RNA sequence as input and removes any c
 </p>
 
 _Links :_
-:link: CRAN REPO for version 0.1.1 : [baseq: Basic Sequence Processing Tool for Biological Data](https://cran.r-project.org/package=baseq)
+:link: CRAN REPO for version 0.1.5 : [baseq: Basic Sequence Processing Tool for Biological Data](https://cran.r-project.org/package=baseq)
 
 Authors :
 **Ambu Vijayan** _Young Professional, ICAR - Central Tuber Crops Research Institute_
