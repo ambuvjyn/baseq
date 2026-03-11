@@ -1,0 +1,80 @@
+url: https://ambuvjyn.github.io/baseq/
+template:
+  bootstrap: 5
+
+navbar:
+  structure:
+    left:  [intro, reference, articles, news]
+    right: [github]
+
+reference:
+  - title: "File Input/Output"
+    desc:  "Functions for reading and writing biological sequences."
+    contents:
+      - read_seq
+      - write_seq
+      - fastq_to_fasta
+  - title: "Sequence Processing"
+    desc:  "Cleaning and quality filtering utilities."
+    contents:
+      - clean_seq
+      - clean_file
+      - filter_fastq_quality
+  - title: "The Central Dogma"
+    desc:  "Conversions between DNA, RNA, and Protein."
+    contents:
+      - dna_to_rna
+      - rna_to_dna
+      - dna_to_protein
+      - rna_to_protein
+      - rev_comp
+      - reverse_translate
+      - get_genetic_code
+  - title: "Scientific Analysis"
+    desc:  "Statistical and biochemical calculations."
+    contents:
+      - count_bases
+      - count_pattern
+      - gc_content
+      - calculate_assembly_stats
+      - count_kmers
+      - calculate_codon_usage
+      - calculate_identity
+      - summarize_fasta
+  - title: "Wet-Lab Utilities"
+    desc:  "Tools for the lab bench researcher."
+    contents:
+      - calculate_tm
+      - calculate_mw
+      - calculate_pi
+      - calculate_charge
+      - simulate_digestion
+      - simulate_pcr
+  - title: "Biological Discovery"
+    desc:  "Finding motifs, ORFs, and generating simulations."
+    contents:
+      - find_longest_orf
+      - find_cpg_islands
+      - search_motif
+      - shuffle_sequence
+      - simulate_sequence
+      - simulate_fasta
+      - simulate_fastq
+  - title: "Visualization"
+    desc:  "Publication-quality plotting functions."
+    contents:
+      - plot_gc_skew
+      - plot_hydrophobicity
+      - plot_aa_composition
+      - plot_dotplot
+  - title: "Object Oriented Classes"
+    desc:  "S3 classes and Bioconductor compatibility."
+    contents:
+      - as_baseq_dna
+      - as_baseq_rna
+      - as_Biostrings
+      - translate
+  - title: "Sample Data"
+    desc:  "Built-in datasets for testing and examples."
+    contents:
+      - sars_fragment

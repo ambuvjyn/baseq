@@ -1,0 +1,10 @@
+^baseq\.Rproj$
+^\.Rproj\.user$
+^demo_baseq\.R$
+^check_results\.txt$
+^cran-comments\.md$
+^tests/testthat/test-demo\.R$
+^_pkgdown\.yml$
+^data-raw$
+^docs$
+^pkgdown$

@@ -1,0 +1,68 @@
+---
+title: "Introduction to baseq"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to baseq}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(baseq)
+```
+
+## Introduction
+
+`baseq` is a basic sequence processing tool for biological data. It provides simple and efficient functions for common tasks in molecular biology, such as cleaning sequences, translating DNA/RNA to protein, and calculating GC content.
+
+## Sequence Cleaning
+
+You can clean DNA or RNA sequences by removing any non-standard characters. The universal `clean_seq()` function automatically detects the type.
+
+```{r cleaning}
+dna_seq <- "ATGCnNryMK"
+clean_seq(dna_seq)
+
+rna_seq <- "AUGGCuuNnRYMK"
+clean_seq(rna_seq)
+```
+
+## Translation
+
+`baseq` can translate DNA and RNA sequences into protein sequences in all six reading frames.
+
+```{r translation}
+dna_seq <- "ATCGAGCTAGCTAGCTAGCTAGCT"
+proteins <- dna_to_protein(dna_seq)
+proteins[["Frame F1"]]
+```
+
+## GC Content
+
+Calculate the GC content of a DNA sequence.
+
+```{r gc}
+dna_seq <- "ATGCATGC"
+gc_content(dna_seq)
+```
+
+## Reading and Writing Files
+
+`baseq` provides universal functions to read and write FASTA and FASTQ files.
+
+```{r files, eval = FALSE}
+# Read a FASTA file into a dataframe
+# df <- read_seq("path/to/file.fasta")
+
+# Write a dataframe to a FASTA file
+# write_seq(df, "output.fasta")
+```
+
+For more details, see the documentation for individual functions.

@@ -1,0 +1,20 @@
+# R specific
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+.Rapp.history
+*-Ex.R
+/*.tar.gz
+/*.Rcheck/
+.DS_Store
+
+# Package build products
+src/*.o
+src/*.so
+src/*.dll
+
+# Docs and temporary files
+docs/
+demo_baseq.R
+check_results.txt
